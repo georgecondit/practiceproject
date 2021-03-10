@@ -1,15 +1,44 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <div class= "app">
+    <header>
+      <div class="container-fluid bg-primary text-light">
+       <div class="row">
+         <div class="col text-center">
+            <h1> Welcome to the Vue Movie Search</h1>
+         </div>
+        </div>
+      </div>
+    </header>
+  <main class="container">
+    <div class="row">
+      <div class="col">
+        <form @submit.prevent="search">
+          <input class="mx-1"  type="text" placeholder="Movie Title?" >
+          <button type="submit" class="btn btn-outline-success">Search</button>
+        </form>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-6">
+        <MovieResults />
+      </div>
+      <div class="col-6">
+        <MovieDetails />
+      </div>
+    </div>
+  </main>
+  <footer>
+    <div>Made by GEo</div>
+  </footer>
+  </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
 
 export default {
   name: 'App',
   components: {
-    HelloWorld
+
   }
 }
 </script>
